@@ -1,8 +1,8 @@
-package controller;
+package com.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import model.Greeting;
+import com.model.Greeting;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
 
 //    @RequestMapping("/greeting")
-//    @GetMapping("greeting")
+    @GetMapping("greeting")
     public ResponseEntity<Greeting> greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new ResponseEntity<Greeting>(new Greeting(counter.incrementAndGet(),
                             String.format(template, name)),HttpStatus.OK);
