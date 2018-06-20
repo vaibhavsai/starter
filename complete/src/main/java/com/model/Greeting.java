@@ -1,5 +1,6 @@
 package com.model;
 
+
 public class Greeting {
 
     private final long id;
