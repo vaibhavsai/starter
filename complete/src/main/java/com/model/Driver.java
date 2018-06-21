@@ -13,4 +13,6 @@ public class Driver
     private PersonalInfo personalInfo;
 
     private List<String> tripIds;
+
+    private Double avgRating;
 }
