@@ -39,7 +39,7 @@ dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.13'
     compile 'com.google.guava:guava:17.0'
     compile "org.springframework.boot:spring-boot-starter-web"
-
+    compileOnly "org.projectlombok:lombok:1.16.16"
     testCompile 'junit:junit:4.12'
 }
 
