@@ -13,11 +13,10 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by z002qz1 on 6/23/18.
- */
+
 @RestController
 @Validated
 @RequestMapping(value = "/cricket/", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -25,6 +24,9 @@ public class CricketController
 {
 //    public static List<List<Job>> testCases = new ArrayList<>();
     public List<ScoreCard> testCases = new ArrayList<>();
+
+    public static HashMap<String,Integer> pointsTracker;
+
     public ScoreCard match = new ScoreCard();
     @Autowired
     private CricketService cricketService;
